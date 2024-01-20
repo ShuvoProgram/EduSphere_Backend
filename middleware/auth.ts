@@ -10,7 +10,7 @@ import { redis } from "../server";
 export const auth = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     const access_token = req.cookies.access_token as string;
-
+   
     if (!access_token)
       throw new ErrorHandler(
         httpStatus.NOT_FOUND,
@@ -20,7 +20,7 @@ export const auth = catchAsyncError(
       access_token,
       config.jwt.secret as Secret
     );
-
+    
     if (!decoded)
       throw new ErrorHandler(httpStatus.NOT_FOUND, "Access token is not valid");
 

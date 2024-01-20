@@ -4,7 +4,7 @@ import config from "../config";
 import { TTokenOptons } from "./jwt.interface";
 import { TUser } from "../modules/user/user.interface";
 import { redis } from "../server";
-
+    
 const createOption = (tokenExpire: number) => {
   return {
     expires: new Date(Date.now() + tokenExpire * 1000 * 60 * 60 * 24),

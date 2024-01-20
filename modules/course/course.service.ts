@@ -127,8 +127,9 @@ const getSingleCourse = async (courseId: string) => {
 
 // get all course without purchase
 const getAllCourse = async () => {
-  const cachedData = await redis.get("allCourse");
 
+  const cachedData = await redis.get("allCourse");
+  console.log(cachedData);
   if (cachedData) {
     return JSON.parse(cachedData);
   }

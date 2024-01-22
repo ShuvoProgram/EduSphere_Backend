@@ -128,18 +128,17 @@ const getSingleCourse = async (courseId: string) => {
 // get all course without purchase
 const getAllCourse = async () => {
 
-  // const cachedData = await redis.get("allCourse");
+  const cachedData = await redis.get("allCourse");
   
-  // if (cachedData) {
-  //   return JSON.parse(cachedData);
-  // }
+  if (cachedData) {
+    return JSON.parse(cachedData);
+  }
 
   const result = await Course.find({}).select(
     "-courseData.videoUrl -courseData.videoSection -courseData.links -courseData.course"
   );
-  console.log(result);
 
-  // await redis.set("allCourse", JSON.stringify(result));
+  await redis.set("allCourse", JSON.stringify(result));
 
   return result;
 };

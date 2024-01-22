@@ -25,7 +25,7 @@ Cloudinary();
 app.use("/api/v1", routes);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send(`Lms server running on PORT ${config.port}`);
+  res.send(`EduSphere server running on PORT ${config.port}`);
 });
 
 // middleware

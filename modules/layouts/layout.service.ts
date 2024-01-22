@@ -5,7 +5,7 @@ import { TBanner, TData, TLayout } from "./layout.interface";
 import { Layout } from "./layout.model";
 
 const createLayout = async (payload: TData) => {
-  const { type, bannerSubTitle, bannerTitle, faq, categories } = payload;
+  const { type, bannerTitle, faq, categories } = payload;
 
   const typeExist = await Layout.findOne({ type });
   if (typeExist)
@@ -14,7 +14,7 @@ const createLayout = async (payload: TData) => {
   let result = null;
 
   if (type === "banner") {
-    if (!bannerSubTitle || !bannerTitle)
+    if ( !bannerTitle)
       throw new ErrorHandler(
         httpStatus.BAD_REQUEST,
         `Please provide all information`
@@ -24,7 +24,6 @@ const createLayout = async (payload: TData) => {
       type: type,
       banner: {
         title: bannerTitle,
-        subTitle: bannerSubTitle,
       },
     });
   }
@@ -58,7 +57,7 @@ const createLayout = async (payload: TData) => {
 };
 
 const updateBanner = async (payload: TData) => {
-  const { type, bannerSubTitle, bannerTitle } = payload;
+  const { type, bannerTitle } = payload;
 
   const typeExist = await Layout.findOne({ type });
   if (!typeExist)
@@ -71,7 +70,7 @@ const updateBanner = async (payload: TData) => {
       type: type,
       banner: {
         title: bannerTitle ? bannerTitle : typeExist.banner.title,
-        subTitle: bannerSubTitle ? bannerSubTitle : typeExist.banner.subTitle,
+        
       },
     };
 

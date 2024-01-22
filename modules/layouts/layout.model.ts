@@ -24,10 +24,7 @@ const LayoutSchema = new Schema<TLayout, Record<string, unknown>>({
     type: {
       title: {
         type: String,
-      },
-      subTitle: {
-        type: String,
-      },
+      }
     },
     default: undefined,
   },

@@ -6,7 +6,6 @@ export type TBanner = {
     url: string;
   };
   title: string;
-  subTitle: string;
 };
 
 // model interfaca
@@ -28,7 +27,6 @@ export type TLayout = {
 export type TData = {
   type: string;
   bannerTitle: string;
-  bannerSubTitle: string;
   categories: [];
   faq: [];
 };

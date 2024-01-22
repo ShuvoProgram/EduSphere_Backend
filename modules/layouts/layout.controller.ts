@@ -11,7 +11,7 @@ const createLayout = catchAsyncError(async (req: Request, res: Response) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: "Layout created uccessfully",
+    message: "Layout created Successfully",
     data: result,
   });
 });

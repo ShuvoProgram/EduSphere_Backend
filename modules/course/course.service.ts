@@ -49,7 +49,7 @@ const createCourse = async (
 
   const uploadedThumbnail = await cloudinaryHelper.uploadToCloudinary(
     thumbnail,
-    "learnify/courses/thumbnails"
+    "edusphere/courses/thumbnails"
   );
 
   courseInfo.thumbnail = uploadedThumbnail!;

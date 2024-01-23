@@ -10,10 +10,12 @@ import Cloudinary from "./cloudinary/cloudinary.config";
 const app: Application = express();
 
 app.use(express.json({ limit: "50mb" }));
+
 app.use(cookieParser());
+
 app.use(
   cors({
-    origin: "https://edu-sphere-frontend.vercel.app/",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );

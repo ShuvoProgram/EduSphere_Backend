@@ -101,12 +101,12 @@ const editCourse = async (
 
 // get single course without purchase
 const getSingleCourse = async (courseId: string) => {
-  const isCacheExist = await redis.get(courseId);
+  // const isCacheExist = await redis.get(courseId);
 
-  if (isCacheExist) {
-    const course = JSON.parse(isCacheExist);
-    return course;
-  }
+  // if (isCacheExist) {
+  //   const course = JSON.parse(isCacheExist);
+  //   return course;
+  // }
 
   const course = await Course.findById(courseId)
     .select(
@@ -120,7 +120,7 @@ const getSingleCourse = async (courseId: string) => {
 
   if (!course) throw new ErrorHandler(httpStatus.NOT_FOUND, "Course not found");
 
-  await redis.setex(courseId, 604800, JSON.stringify(course));
+  // await redis.setex(courseId, 604800, JSON.stringify(course));
 
   return course;
 };

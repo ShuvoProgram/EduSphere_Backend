@@ -134,6 +134,7 @@ const deleteCourse = catchAsyncError(async (req: Request, res: Response) => {
     data: result,
   });
 });
+
 const generateVideoUrl = catchAsyncError(
   async (req: Request, res: Response) => {
     try {

@@ -133,7 +133,6 @@ const updateAccessToken = catchAsyncError(
 
 const getUserInfo = catchAsyncError(async (req: Request, res: Response) => {
   const user = req.user;
-  console.log(user)
 
   const result = await UserService.getUserInfo(user?._id);
 

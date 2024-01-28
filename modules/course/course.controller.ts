@@ -162,6 +162,7 @@ const generateVideoUrl = catchAsyncError(
           },
         }
       );
+      // console.log(response);
 
       res.json(response.data);
     } catch (error: any) {

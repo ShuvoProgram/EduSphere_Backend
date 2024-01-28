@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: 'https://edu-sphere-frontend.vercel.app/',
+    origin: "https://edu-sphere-frontend.vercel.app/",
     credentials: true,
   })
 );

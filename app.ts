@@ -15,10 +15,12 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: ["https://edu-sphere-frontend.vercel.app", "http://localhost:3000"],
     credentials: true,
   })
 );
+
+app.options("*", cors());
 
 app.use(express.urlencoded({ extended: true }));
 

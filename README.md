@@ -8,6 +8,8 @@
 
 # EduSphere API Endpoints
 
+<p>🚀 Our project API offers a comprehensive suite of endpoints categorized by modules. The root route acts as the gateway to various application modules. Users can perform operations like registration, authentication, and profile management. Analytics, Courses, Layouts, Notifications, and Orders modules streamline data retrieval and management, enhancing user experience.</p>
+
 ## User Operations
 
 `/users`
@@ -25,3 +27,52 @@
 - GET /get-all-users: Get all users (admin only).
 - PATCH /update-user-role/:email: Update user role (admin only).
 - DELETE /delete-user/:userId: Delete user (admin only).
+
+## Analytics
+
+`/analytics`
+
+- GET /get-user-analytics: Get user analytics (admin only).
+- GET /get-course-analytics: Get course analytics (admin only).
+- GET /get-order-analytics: Get order analytics (admin only).
+
+## Courses
+
+`/courses`
+
+- POST /create-course: Create a new course (admin only).
+- PATCH /edit-course/:courseId: Edit a course (admin only).
+- GET /get-course/:courseId: Get a single course.
+- GET /get-courses: Get all courses.
+- GET /get-course-content/:courseId: Get course content by user.
+- PATCH /add-question: Add a question.
+- PATCH /add-answer: Add an answer.
+- PATCH /add-review/:courseId: Add a review.
+- GET /get-all-courses: Get all courses (admin only).
+- POST /get-vdocipherOTP: Generate Video URL.
+- DELETE /delete-course/:courseId: Delete a course (admin only).
+
+## Layouts
+
+`/layout`
+
+- POST /create-layout: Create a layout (admin only).
+- PATCH /update-banner: Update layout banner (admin only).
+- PATCH /edit-layout: Edit layout (admin only).
+- GET /get-layout/:type: Get layout.
+
+## Notifications
+
+`/notifications`
+
+- GET /: Get notifications (admin only).
+- PATCH /update-status/:id: Update notification status (admin only).
+
+## Orders
+
+`/orders`
+
+- POST /create-order: Create a new order.
+- GET /get-all-orders: Get all orders (admin only).
+- GET /payment/stripe-key: Get Stripe key.
+- POST /payment: Make a payment.

@@ -6,6 +6,42 @@
 
 <p>EduSphere 🎓 is a transformative project dedicated to revolutionizing education through innovative courses and cutting-edge learning experiences. With a commitment to fostering knowledge, EduSphere offers a diverse range of courses designed to empower learners in various domains. From interactive virtual classrooms to hands-on practical sessions, the project prioritizes engaging and personalized education. EduSphere's mission is to create a dynamic learning sphere where students thrive, gaining not just knowledge but also essential skills for the future. Join EduSphere and embark on a journey of educational excellence, where every course opens doors to endless possibilities. 🌐📚</p>
 
+# EduSphere Key Features
+
+## Modular Architecture 🏗️
+
+- Built on a modular architecture for scalability and ease of maintenance.
+
+## User Management 👤
+
+- Comprehensive user management system for registration, authentication, and profile management.
+- Role-based access control ensures secure operations.
+
+## Analytics Insights 📊
+
+- Gain valuable insights into user behavior, course performance, and order patterns.
+- Analytics module provides detailed reports for informed decision-making.
+
+## Course Management 📚
+
+- Flexible course management functionalities for creation, editing, and deletion.
+- Simplified course retrieval ensures easy access to learning materials.
+
+## Customizable Layouts 🎨
+
+- Customize layouts effortlessly with dynamic layout management capabilities.
+- Update banners to enhance visual appeal and user experience.
+
+## Real-time Notifications 🔔
+
+- Stay informed with real-time notifications for important updates and events.
+- Easily manage notification status and retrieval for effective communication.
+
+## Order Processing 💳
+
+- Streamlined order management system for creating, retrieving, and processing orders.
+- Secure payment processing ensures a seamless transaction experience.
+
 # EduSphere API Endpoints
 
 <p>🚀 Our project API offers a comprehensive suite of endpoints categorized by modules. The root route acts as the gateway to various application modules. Users can perform operations like registration, authentication, and profile management. Analytics, Courses, Layouts, Notifications, and Orders modules streamline data retrieval and management, enhancing user experience.</p>

@@ -17,11 +17,11 @@ app.use(
   cors({
     origin: ["https://edu-sphere-frontend.vercel.app", "http://localhost:3000"],
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
+    // methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
   })
 );
 
-app.options("*", cors());
+// app.options("*", cors());
 
 app.use(express.urlencoded({ extended: true }));
 
